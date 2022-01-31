@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class Course {
     private String courseName, courseID;
-    private String[] students = new String[100];
+    private Student[] students = new Student[100];
     private int numberOfStudents = 0;
 
     public Course() {
@@ -32,7 +32,7 @@ public class Course {
     //Cycles through all the students and prints them
     public void getStudents() {
         for(int i = 0; i < numberOfStudents; i++) {
-            System.out.println(students[i]);
+            System.out.println(students[i].getStudentName());
         }
     }
 
@@ -40,7 +40,7 @@ public class Course {
         return numberOfStudents;
     }
 
-    void addStudent (String student) {
+    void addStudent (Student student) {
         if(numberOfStudents <= 99) {
             students[numberOfStudents] = student;
             numberOfStudents++;
@@ -49,9 +49,9 @@ public class Course {
             System.out.println("No more students can be held");
     }
 
-    void dropStudent (String student) {
+    void dropStudent (Student student) {
         int i = 0;
-        String[] temp, temp2;
+        Student[] temp, temp2;
 
         if(numberOfStudents >= 1) {
             while(student != students[i] && i < numberOfStudents) {

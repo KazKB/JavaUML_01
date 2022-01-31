@@ -5,22 +5,26 @@ public class Driver {
         Course math = new Course("Mathematics", "M084");
         Course socialStudies = new Course("Social Studies", "SS63");
         Course writing = new Course("Writing", "W053");
-        Student student = new Student("John", "Antigua", "S023");
-        Faculty faculty = new Faculty("Jane", "Barbuda", "F045");
+        Student John = new Student("John", "Antigua", "S023");
+        Student Jack = new Student("Jack", "Antigua", "S023");
+        Student Joseph = new Student("Joseph", "Antigua", "S023");
+        Student Jason = new Student("Jason", "Antigua", "S023");
+        Student Johnny = new Student("Johnny", "Antigua", "S023");
+        Faculty Jane = new Faculty("Jane", "Barbuda", "F045");
 
         //Course Test
         System.out.println("Course Test");
-        course.addStudent("Michael");
-        course.addStudent("Josh");
-        course.addStudent("Richard");
-        course.addStudent("Tang");
-        course.addStudent("Weasel");
+        course.addStudent(John);
+        course.addStudent(Jack);
+        course.addStudent(Joseph);
+        course.addStudent(Jason);
+        course.addStudent(Johnny);
 
         course.getStudents();
 
         System.out.println();
-        course.dropStudent("Linken");
-        course.dropStudent("Richard");
+        course.dropStudent(Johnny);
+        course.dropStudent(Joseph);
         System.out.println();
 
         course.getStudents();
@@ -28,36 +32,36 @@ public class Driver {
         //Student test
         System.out.println();
         System.out.println("Student Test");
-        student.addCourse(course);
-        student.addCourse(english);
-        student.addCourse(math);
-        student.addCourse(socialStudies);
+        John.addCourse(course);
+        John.addCourse(english);
+        John.addCourse(math);
+        John.addCourse(socialStudies);
 
-        student.getCourseList();
+        John.getCourseList();
 
         System.out.println();
-        student.dropCourse(writing);
-        student.dropCourse(math);
+        John.dropCourse(writing);
+        John.dropCourse(math);
         System.out.println();
 
-        student.getCourseList();
+        John.getCourseList();
 
         //Faculty test
         System.out.println();
         System.out.println("Faculty Test");
-        faculty.addCourse(course);
-        faculty.addCourse(english);
-        faculty.addCourse(writing);
-        faculty.addCourse(socialStudies);
+        Jane.addCourse(course);
+        Jane.addCourse(english);
+        Jane.addCourse(writing);
+        Jane.addCourse(socialStudies);
 
-        faculty.getCourseList();
+        Jane.getCourseList();
 
         System.out.println();
-        faculty.dropCourse(math);
-        faculty.dropCourse(writing);
+        Jane.dropCourse(math);
+        Jane.dropCourse(writing);
         System.out.println();
 
-        faculty.getCourseList();
+        Jane.getCourseList();
 
 
     }
